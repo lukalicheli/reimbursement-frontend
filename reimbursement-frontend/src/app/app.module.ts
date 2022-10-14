@@ -8,6 +8,7 @@ import { CreateReimbursementComponent } from './components/create-reimbursement/
 import { CreateUserComponent } from './components/create-user/create-user.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginUserComponent } from './components/login-user/login-user.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReimbursementListComponent,
     UserListComponent,
     CreateReimbursementComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    LoginUserComponent
   ],
   imports: [
     BrowserModule,
