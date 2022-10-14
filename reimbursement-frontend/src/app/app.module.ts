@@ -8,6 +8,8 @@ import { ReimbursementListComponent } from './components/reimbursement-list/reim
 import { UserListComponent } from './components/user-list/user-list.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { AddReimbursementComponent } from './components/add-reimbursement/add-reimbursement.component';
+import { CreateReimbursementComponent } from './components/create-reimbursement/create-reimbursement.component';
+import { CreateUserComponent } from './components/create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AddReimbursementComponent } from './components/add-reimbursement/add-re
     ReimbursementListComponent,
     UserListComponent,
     AddUserComponent,
-    AddReimbursementComponent
+    AddReimbursementComponent,
+    CreateReimbursementComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
