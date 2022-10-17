@@ -1,1 +1,34 @@
 <p>reimbursement-list works!</p>
+<div class="container col-md-7">
+    <h2>
+        Employee Reimbursement Service List
+    </h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th> ID</th>
+                <th> Amount</th>
+                <th> Submitted</th>
+                <th> Resolved</th>
+                <th> Description</th>
+                <th> AuthorID</th>
+                <th> ResolverID</th>
+                <th> StatusID</th>
+                <th> TypeID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let reimb of reimbResponse">
+                <td> {{ reimb.reimbID }} </td>
+                <td> {{ reimb.amount }} </td>
+                <td> {{ reimb.submitted }} </td>
+                <td> {{ reimb.resolved }} </td>
+                <td> {{ reimb.description }} </td>
+                <td> {{ reimb.authorID }} </td>
+                <td> {{ reimb.resolverID }} </td>
+                <td> {{ reimb.statusID}} </td>
+                <td> {{ reimb.typeID }} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
