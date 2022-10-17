@@ -1,1 +1,28 @@
 <p>user-list works!</p>
+<div class="container col-md-7">
+    <h2>
+        Employee Reimbursement Service List
+    </h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th> First Name</th>
+                <th> Last Name</th>
+                <th> Email</th>
+                <th> Username</th>
+                <th> Role</th>
+                <th> Active?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let userResponse of usersResponse">
+                <td> {{ userResponse.givenName }} </td>
+                <td> {{ userResponse.surname }} </td>
+                <td> {{ userResponse.email }} </td>
+                <td> {{ userResponse.username }} </td>
+                <td> {{ userResponse.role }} </td>
+                <td> {{ userResponse.isActive }} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

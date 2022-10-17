@@ -24,13 +24,13 @@ export class LoginUserComponent implements OnInit {
       this.as.user = data.body;
       console.log(data.body);
       console.log(this.as.user);
-      // if (this.as.user.role == 'admin') {
-      //   this.router.navigate(['users']);
-      // } else if (this.as.user.role == 'finance manager') {
-      //   this.router.navigate(['reimbursement']);
-      // } else if (this.as.user.role == 'employee') {
-      //   this.router.navigate(['users']);
-      // }
+      if (this.as.user.role == 'admin') {
+        this.router.navigate(['users']);
+      } else if (this.as.user.role == 'finance manager') {
+        this.router.navigate(['reimbursement']);
+      } else if (this.as.user.role == 'employee') {
+        this.router.navigate(['users']);
+      }
     });
   }
 }
