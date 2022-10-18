@@ -13,4 +13,12 @@ export class EmployeeService {
   getUserList(): Observable<UserResponse[]> {
     return this.httpClient.get<UserResponse[]>(this.baseUrl);
   }
+
+  createUser(user: UserResponse): Observable<Object>{
+    return this.httpClient.post(this.baseUrl, user);
+  }
+
+  updateUserActivationByUsername(username: string): Observable<UserResponse>{
+    return this.httpClient.put<UserResponse>(this.baseUrl, username);
+  }
 }

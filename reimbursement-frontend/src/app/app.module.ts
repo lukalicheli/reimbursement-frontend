@@ -9,6 +9,7 @@ import { CreateUserComponent } from './components/create-user/create-user.compon
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginUserComponent } from './components/login-user/login-user.component';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
 
 
 
@@ -19,7 +20,8 @@ import { LoginUserComponent } from './components/login-user/login-user.component
     UserListComponent,
     CreateReimbursementComponent,
     CreateUserComponent,
-    LoginUserComponent
+    LoginUserComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,12 @@
 export class UserResponse {
-  constructor(
-    public id: string,
-    public givenName: string,
-    public surname: string,
-    public email: string,
-    public username: string,
-    public role: string,
-    public isActive: boolean
-  ) {}
+
+  id!: string;
+  givenName!: string;
+  surname!: string;
+  email!: string;
+  username!: string;
+  password!: string;
+  role!: string;
+  isActive!: boolean;
+  
 }

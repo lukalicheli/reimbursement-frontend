@@ -16,6 +16,7 @@ export class AuthServiceService {
     surname: '',
     email: '',
     username: '',
+    password: '',
     role: '',
     isActive: false,
   };

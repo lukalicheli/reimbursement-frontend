@@ -1,4 +1,13 @@
-<p>user-list works!</p>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link"> Employee List</a>
+         </li>
+        <li class="nav-item">
+            <a routerLink="create-user" routerLinkActive="active" class="nav-link"> Add Employee</a>
+         </li>
+    </ul>
+</nav>
 <div class="container col-md-7">
     <h2>
         Employee Reimbursement Service List
@@ -12,6 +21,7 @@
                 <th> Username</th>
                 <th> Role</th>
                 <th> Active?</th>
+                <th> Action</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +32,11 @@
                 <td> {{ userResponse.username }} </td>
                 <td> {{ userResponse.role }} </td>
                 <td> {{ userResponse.isActive }} </td>
+                <td>
+                    <button (click)="updateUser(userResponse.isActive)" class="btn btn-info">
+                        Update Is-Active Status
+                    </button>
+                </td>
             </tr>
         </tbody>
     </table>

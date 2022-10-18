@@ -1,0 +1,26 @@
+<h3>Update employee works</h3>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="/users" routerLinkActive="active" class="nav-link"> Employee List</a>
+         </li>
+        <li class="nav-item">
+            <a class="nav-link"> Update Employee</a>
+         </li>
+    </ul>
+</nav>
+<div class="container col-md-7 offset-md-3">
+<h3> Update Employee's Is-Active Status </h3>
+<form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label> Is-Active Status</label>
+        <input type="boolean" class="form-control" id="isActive"
+            [(ngModel)] = "user.isActive" name="isActive">
+    </div>
+
+    <button class="btn btn-success" type="submit">
+        Submit
+    </button>
+</form>
+</div>
