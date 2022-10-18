@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: '', component: LoginUserComponent },
   { path: 'users', component: UserListComponent },
   { path: 'users/admins', component: UserListComponent },
+  { path: 'users/employees', component: UserListComponent },
   { path: 'users/create-user', component: CreateUserComponent },
   { path: 'reimbursement', component: ReimbursementListComponent },
   { path: 'reimbursement/create-reimbursement', component: CreateReimbursementComponent },

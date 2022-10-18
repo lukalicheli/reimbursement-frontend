@@ -18,6 +18,10 @@ export class EmployeeService {
     return this.httpClient.get<UserResponse[]>(this.baseUrl + "/admins");
   }
 
+  getEmployeesList(): Observable<UserResponse[]> {
+    return this.httpClient.get<UserResponse[]>(this.baseUrl + "/employees");
+  }
+
   createUser(user: UserResponse): Observable<Object>{
     return this.httpClient.post(this.baseUrl, user);
   }
