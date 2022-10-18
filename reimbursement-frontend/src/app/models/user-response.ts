@@ -1,5 +1,4 @@
 export class UserResponse {
-
   id!: string;
   givenName!: string;
   surname!: string;
@@ -8,5 +7,4 @@ export class UserResponse {
   password!: string;
   role!: string;
   isActive!: boolean;
-  
 }
