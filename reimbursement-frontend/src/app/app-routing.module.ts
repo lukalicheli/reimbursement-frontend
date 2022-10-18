@@ -10,6 +10,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
 const routes: Routes = [
   { path: '', component: LoginUserComponent },
   { path: 'users', component: UserListComponent },
+  { path: 'users/admins', component: UserListComponent },
   { path: 'users/create-user', component: CreateUserComponent },
   { path: 'reimbursement', component: ReimbursementListComponent },
   { path: 'reimbursement/create-reimbursement', component: CreateReimbursementComponent },

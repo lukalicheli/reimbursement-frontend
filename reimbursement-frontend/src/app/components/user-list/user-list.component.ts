@@ -15,7 +15,7 @@ export class UserListComponent implements OnInit {
   constructor(private employeeService: EmployeeService, private router: Router ) { }
 
   ngOnInit(): void {
-    this.getUsersResponse();
+    this.getAdminsResponse();
   }
 
 
@@ -24,6 +24,12 @@ export class UserListComponent implements OnInit {
       this.usersResponse = data;
     });
 
+  }
+
+  private getAdminsResponse(){
+    this.employeeService.getAdminsList().subscribe(data => {
+      this.usersResponse = data;
+    })
   }
 
   updateUser(isActive: boolean){
