@@ -1,6 +1,24 @@
-<p>login-user works!</p>
-
-<input type="text" placeholder="enter username" [(ngModel)] = credentials.username>
-<input type="text" placeholder="enter password" [(ngModel)] = credentials.password>
-<button (click) ="loginFunction()">Login</button>
-
+<div class="container col-md-7">
+    <h1 style="color: red;">
+        Reimbursement Services User Login
+    </h1>
+    <form (ngSubmit)="loginFunction()">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">
+                Username
+            </label>
+            <input type="text" [(ngModel)]=credentials.username class="form-control" 
+            id="" name="username" placeholder="username">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">
+                Password
+            </label>
+            <input type="password" [(ngModel)]=credentials.password class="form-control" 
+            id="password" name="password" placeholder="password">
+        </div>
+        <button type="submit" class="btn btn-primary">
+            Login
+        </button>
+    </form>
+</div>
