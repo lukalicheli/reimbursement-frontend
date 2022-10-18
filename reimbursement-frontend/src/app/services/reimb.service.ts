@@ -14,4 +14,8 @@ export class ReimbService {
   getReimbList(): Observable<ReimbResponse[]> {
     return this.httpClient.get<ReimbResponse[]>(this.baseUrl);
   }
+
+  createReimbursement(reimb: ReimbResponse): Observable<Object>{
+    return this.httpClient.post(this.baseUrl, reimb)
+  }
 }
