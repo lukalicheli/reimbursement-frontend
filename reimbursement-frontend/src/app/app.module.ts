@@ -13,6 +13,7 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
 import { PendingReimbursementsComponent } from './components/pending-reimbursements/pending-reimbursements.component';
 import { EmployeesListComponent } from './components/employees-list/employees-list.component';
 import { AdminsListComponent } from './components/admins-list/admins-list.component';
+import { FinanceManagerListComponent } from './components/finance-manager-list/finance-manager-list.component';
 
 
 
@@ -27,7 +28,8 @@ import { AdminsListComponent } from './components/admins-list/admins-list.compon
     UpdateUserComponent,
     PendingReimbursementsComponent,
     EmployeesListComponent,
-    AdminsListComponent
+    AdminsListComponent,
+    FinanceManagerListComponent
   ],
   imports: [
     BrowserModule,

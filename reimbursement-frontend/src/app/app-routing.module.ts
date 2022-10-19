@@ -4,6 +4,7 @@ import { AdminsListComponent } from './components/admins-list/admins-list.compon
 import { CreateReimbursementComponent } from './components/create-reimbursement/create-reimbursement.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
 import { EmployeesListComponent } from './components/employees-list/employees-list.component';
+import { FinanceManagerListComponent } from './components/finance-manager-list/finance-manager-list.component';
 import { LoginUserComponent } from './components/login-user/login-user.component';
 import { PendingReimbursementsComponent } from './components/pending-reimbursements/pending-reimbursements.component';
 import { ReimbursementListComponent } from './components/reimbursement-list/reimbursement-list.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'users', component: UserListComponent },
   { path: 'users/admins-list', component: AdminsListComponent },
   { path: 'users/employees-list', component: EmployeesListComponent },
+  { path: 'users/finance-manager-list', component: FinanceManagerListComponent }, 
   { path: 'users/create-user', component: CreateUserComponent },
   { path: 'reimbursement', component: ReimbursementListComponent },
   { path: 'reimbursement/allPending', component: PendingReimbursementsComponent },
