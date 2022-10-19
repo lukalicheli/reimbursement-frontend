@@ -1,3 +1,4 @@
+import { InvokeFunctionExpr } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ReimbResponse } from 'src/app/models/reimb-response';
@@ -15,6 +16,19 @@ export class ReimbursementListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllReimbursements();
+  }
+
+  popUp(input: any){
+    alert(
+      "ID: " + input.reimbID+ 
+      "\nType: " + input.type+
+      "\nStatus: " + input.status+
+      "\nAmount: $" + input.amount+ 
+      "\nDescription: " + input.description+
+      "\nSubmit Time: " + input.submitted+ 
+      "\nAuthorID: " + input.authorID+
+      "\nResolved Time: " + input.resolved+
+      "\nResolverID: "+ input.resolverID)
   }
 
   getAllReimbursements() {
