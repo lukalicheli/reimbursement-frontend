@@ -30,19 +30,4 @@ export class EmployeesListComponent implements OnInit {
     this.router.navigate(['users/update-user', isActive]);
   }
 
-  navigateToEmployees() {
-    this.router.navigate(['users/employees-list']);
-  }
-
-  navigateToAdmins() {
-    this.router.navigate(['users/admins-list']);
-  }
-
-  navigateToAll() {
-    this.router.navigate(['/users']);
-  }
-
-  navigateToCreate() {
-    this.router.navigate(['users/create-user']);
-  }
 }

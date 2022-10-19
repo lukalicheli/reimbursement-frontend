@@ -26,20 +26,7 @@ export class UserListComponent implements OnInit {
     });
   }
 
-
   updateUser(isActive: boolean) {
     this.router.navigate(['users/update-user', isActive]);
-  }
-
-  navigateToEmployees() {
-    this.router.navigate(['users/employees-list']);
-  }
-
-  navigateToAdmins() {
-    this.router.navigate(['users/admins-list']);
-  }
-
-  navigateToCreate() {
-    this.router.navigate(['users/create-user']);
   }
 }
