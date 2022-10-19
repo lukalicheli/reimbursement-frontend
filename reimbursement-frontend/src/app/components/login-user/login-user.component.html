@@ -2,7 +2,7 @@
     <h1 style="color: red;">
         Reimbursement Services User Login
     </h1>
-    <form (ngSubmit)="loginFunction()">
+    <form>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">
                 Username
@@ -17,8 +17,11 @@
             <input type="password" [(ngModel)]=credentials.password class="form-control" 
             id="password" name="password" placeholder="password">
         </div>
-        <button type="submit" class="btn btn-primary">
+        <button (click)="loginFunction()" type="submit" class="btn btn-primary">
             Login
+        </button>
+        <button (click)="signUpFunction()" type="submit" class="btn btn-primary">
+            Signup
         </button>
     </form>
 </div>
