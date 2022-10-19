@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginUserComponent } from './components/login-user/login-user.component';
 import { CreateReimbursementComponent } from './components/reimbursements/create-reimbursement/create-reimbursement.component';
-import { ReimbursementListComponent } from './components/reimbursements/reimbursement-list/reimbursement-list.component';
+import { ReimbursementListComponent } from './components/reimbursement-list/reimbursement-list/reimbursement-list.component';
 import { ActiveListComponent } from './components/users/active-list/active-list.component';
 import { AdminsListComponent } from './components/users/admins-list/admins-list.component';
 import { CreateUserComponent } from './components/users/create-user/create-user.component';

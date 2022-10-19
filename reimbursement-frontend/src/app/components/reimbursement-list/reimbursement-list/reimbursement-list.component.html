@@ -9,16 +9,15 @@
   </ul>
 </nav>
 
-<div>
-  <h3>Filter Reimbursements</h3>
-  <button (click) = "getAllReimbursements()">All Reimbursements</button>
-  <button (click) = "getAllPendingReimbursements()">Pending Reimbursements</button>
-  <button (click) = "getAllDeniedReimbursements()">Denied Reimbursements</button>
-  <button (click) = "getAllApprovedReimbursements()">Approved Reimbursements</button>
-</div>
-
 <div class="container col-md-7">
-  <h2>Employee Reimbursement Service List</h2>
+  <h2 class = "filterBar">Employee Reimbursement Service List</h2>
+  <h3 class = "filterBar">Filter Reimbursements</h3>
+    <div class = "buttonContainer">
+      <button class="filterButton" (click) = "getAllReimbursements()"> All Reimbursements </button>
+      <button class="filterButton" (click) = "getAllPendingReimbursements()"> Pending Reimbursements </button>
+      <button class="filterButton" (click) = "getAllDeniedReimbursements()"> Denied Reimbursements </button>
+      <button class="filterButton" (click) = "getAllApprovedReimbursements()"> Approved Reimbursements </button>
+    </div>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -27,21 +26,17 @@
         <th>Submitted</th>
         <th>Resolved</th>
         <th>Description</th>
-        <th>AuthorID</th>
-        <th>ResolverID</th>
         <th>Status</th>
         <th>Type</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let reimb of reimbResponse">
+      <tr *ngFor="let reimb of reimbResponse" (click) = "popUp(reimb)">
         <td>{{ reimb.reimbID }}</td>
-        <td>{{ reimb.amount }}</td>
+        <td>{{ reimb.amount | currency }}</td>
         <td>{{ reimb.submitted }}</td>
         <td>{{ reimb.resolved }}</td>
         <td>{{ reimb.description }}</td>
-        <td>{{ reimb.authorID }}</td>
-        <td>{{ reimb.resolverID }}</td>
         <td>{{ reimb.status }}</td>
         <td>{{ reimb.type }}</td>
       </tr>

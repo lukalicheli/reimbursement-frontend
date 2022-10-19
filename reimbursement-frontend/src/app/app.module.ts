@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReimbursementListComponent } from './components/reimbursements/reimbursement-list/reimbursement-list.component';
+import { ReimbursementListComponent } from './components/reimbursement-list/reimbursement-list/reimbursement-list.component';
 import { UserListComponent } from './components/users/user-list/user-list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
