@@ -13,7 +13,6 @@ import { EmployeesListComponent } from './components/users/employees-list/employ
 import { AdminsListComponent } from './components/users/admins-list/admins-list.component';
 import { FinanceManagerListComponent } from './components/users/finance-manager-list/finance-manager-list.component';
 import { CreateReimbursementComponent } from './components/reimbursements/create-reimbursement/create-reimbursement.component';
-import { PendingReimbursementsComponent } from './components/reimbursements/pending-reimbursements/pending-reimbursements.component';
 import { ActiveListComponent } from './components/users/active-list/active-list.component';
 import { InActiveListComponent } from './components/users/in-active-list/in-active-list.component';
 
@@ -26,7 +25,6 @@ import { InActiveListComponent } from './components/users/in-active-list/in-acti
     CreateUserComponent,
     LoginUserComponent,
     UpdateUserComponent,
-    PendingReimbursementsComponent,
     EmployeesListComponent,
     AdminsListComponent,
     FinanceManagerListComponent,
