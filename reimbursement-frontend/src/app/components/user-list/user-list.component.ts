@@ -17,7 +17,7 @@ export class UserListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getAdminsResponse();
+    this.getUsersResponse();
   }
 
   private getUsersResponse() {
@@ -26,19 +26,20 @@ export class UserListComponent implements OnInit {
     });
   }
 
-  private getAdminsResponse() {
-    this.employeeService.getAdminsList().subscribe((data) => {
-      this.usersResponse = data;
-    });
-  }
-
-  private getEmployeesResponse() {
-    this.employeeService.getEmployeesList().subscribe((data) => {
-      this.usersResponse = data;
-    });
-  }
 
   updateUser(isActive: boolean) {
     this.router.navigate(['users/update-user', isActive]);
+  }
+
+  navigateToEmployees() {
+    this.router.navigate(['users/employees-list']);
+  }
+
+  navigateToAdmins() {
+    this.router.navigate(['users/admins-list']);
+  }
+
+  navigateToCreate() {
+    this.router.navigate(['users/create-user']);
   }
 }

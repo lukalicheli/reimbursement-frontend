@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginUserComponent } from './components/login-user/login-user.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { PendingReimbursementsComponent } from './components/pending-reimbursements/pending-reimbursements.component';
+import { EmployeesListComponent } from './components/employees-list/employees-list.component';
+import { AdminsListComponent } from './components/admins-list/admins-list.component';
 
 
 
@@ -21,7 +24,10 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
     CreateReimbursementComponent,
     CreateUserComponent,
     LoginUserComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    PendingReimbursementsComponent,
+    EmployeesListComponent,
+    AdminsListComponent
   ],
   imports: [
     BrowserModule,

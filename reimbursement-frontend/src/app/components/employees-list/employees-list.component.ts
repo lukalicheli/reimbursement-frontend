@@ -4,37 +4,26 @@ import { UserResponse } from 'src/app/models/user-response';
 import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
-  selector: 'app-create-user',
-  templateUrl: './create-user.component.html',
-  styleUrls: ['./create-user.component.css'],
+  selector: 'app-employees-list',
+  templateUrl: './employees-list.component.html',
+  styleUrls: ['./employees-list.component.css']
 })
-export class CreateUserComponent implements OnInit {
-  user: UserResponse = new UserResponse();
+export class EmployeesListComponent implements OnInit {
+  usersResponse!: UserResponse[];
 
   constructor(
     private employeeService: EmployeeService,
     private router: Router
   ) {}
 
-  ngOnInit(): void {}
-
-  saveUser() {
-    this.employeeService.createUser(this.user).subscribe(
-      (data) => {
-        console.log(data);
-        this.goToUserList();
-      },
-      (error) => console.log(error)
-    );
+  ngOnInit(): void {
+    this.getEmployeesResponse();
   }
 
-  goToUserList() {
-    this.router.navigate(['/users']);
-  }
-
-  onSubmit() {
-    console.log(this.user);
-    this.saveUser();
+  private getEmployeesResponse() {
+    this.employeeService.getEmployeesList().subscribe((data) => {
+      this.usersResponse = data;
+    });
   }
 
   updateUser(isActive: boolean) {
