@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginUserComponent } from './components/login-user/login-user.component';
 import { CreateReimbursementComponent } from './components/reimbursements/create-reimbursement/create-reimbursement.component';
-import { PendingReimbursementsComponent } from './components/reimbursements/pending-reimbursements/pending-reimbursements.component';
 import { ReimbursementListComponent } from './components/reimbursements/reimbursement-list/reimbursement-list.component';
 import { ActiveListComponent } from './components/users/active-list/active-list.component';
 import { AdminsListComponent } from './components/users/admins-list/admins-list.component';
@@ -23,7 +22,6 @@ const routes: Routes = [
   { path: 'users/inActive-list', component: InActiveListComponent },
   { path: 'users/create-user', component: CreateUserComponent },
   { path: 'reimbursement', component: ReimbursementListComponent },
-  { path: 'reimbursement/allPending', component: PendingReimbursementsComponent },
   { path: 'reimbursement/create-reimbursement', component: CreateReimbursementComponent },
   { path: 'users/update-user/:{username}Activation', component: UpdateUserComponent},
 ];

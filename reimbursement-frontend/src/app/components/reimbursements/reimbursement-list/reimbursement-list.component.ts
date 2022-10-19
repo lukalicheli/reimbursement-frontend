@@ -17,9 +17,26 @@ export class ReimbursementListComponent implements OnInit {
     this.getAllReimbursements();
   }
 
-  private getAllReimbursements() {
+  getAllReimbursements() {
     this.reimbService.getReimbList().subscribe((data) => {
-      this.router.navigate(['reimbursement']);
+      this.reimbResponse = data;
+    });
+  }
+
+  getAllPendingReimbursements() {
+    this.reimbService.getPendingList().subscribe((data) => {
+      this.reimbResponse = data;
+    });
+  }
+
+  getAllDeniedReimbursements() {
+    this.reimbService.getDeniedList().subscribe((data) => {
+      this.reimbResponse = data;
+    });
+  }
+
+  getAllApprovedReimbursements() {
+    this.reimbService.getApprovedList().subscribe((data) => {
       this.reimbResponse = data;
     });
   }
