@@ -2,20 +2,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReimbursementListComponent } from './components/reimbursement-list/reimbursement-list.component';
-import { UserListComponent } from './components/user-list/user-list.component';
-import { CreateReimbursementComponent } from './components/create-reimbursement/create-reimbursement.component';
-import { CreateUserComponent } from './components/create-user/create-user.component';
+import { ReimbursementListComponent } from './components/reimbursements/reimbursement-list/reimbursement-list.component';
+import { UserListComponent } from './components/users/user-list/user-list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginUserComponent } from './components/login-user/login-user.component';
-import { UpdateUserComponent } from './components/update-user/update-user.component';
-import { PendingReimbursementsComponent } from './components/pending-reimbursements/pending-reimbursements.component';
-import { EmployeesListComponent } from './components/employees-list/employees-list.component';
-import { AdminsListComponent } from './components/admins-list/admins-list.component';
-import { FinanceManagerListComponent } from './components/finance-manager-list/finance-manager-list.component';
-
-
+import { CreateUserComponent } from './components/users/create-user/create-user.component';
+import { UpdateUserComponent } from './components/users/update-user/update-user.component';
+import { EmployeesListComponent } from './components/users/employees-list/employees-list.component';
+import { AdminsListComponent } from './components/users/admins-list/admins-list.component';
+import { FinanceManagerListComponent } from './components/users/finance-manager-list/finance-manager-list.component';
+import { CreateReimbursementComponent } from './components/reimbursements/create-reimbursement/create-reimbursement.component';
+import { PendingReimbursementsComponent } from './components/reimbursements/pending-reimbursements/pending-reimbursements.component';
 
 @NgModule({
   declarations: [
