@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { UpdateUserBody } from '../models/update-user-body';
 import { UserResponse } from '../models/user-response';
 
 @Injectable({
@@ -37,6 +38,11 @@ export class EmployeeService {
   createUser(user: UserResponse): Observable<Object>{
     return this.httpClient.post(this.baseUrl, user);
   }
+
+  updateUser(form: UpdateUserBody): Observable<HttpResponse<any>>{
+    return this.httpClient.put<any>(this.baseUrl, form) as unknown as Observable<HttpResponse<UserResponse>>;
+  }
+
 
   updateUserActivationByUsername(username: string): Observable<UserResponse>{
     return this.httpClient.put<UserResponse>(this.baseUrl, username);

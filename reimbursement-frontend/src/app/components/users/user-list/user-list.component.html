@@ -3,30 +3,23 @@
         <li class="nav-item">
             <a [routerLink]="['/users']" class="nav-link"> Employee List</a>
          </li>
-         <li class="nav-item">
-            <a [routerLink]="['/users/employees-list']" class="nav-link"> Employee</a>
-         </li>
-         <li class="nav-item">
-            <a [routerLink]="['/users/admins-list']" class="nav-link"> Admins</a>
-         </li>
-         <li class="nav-item">
-            <a [routerLink]="['/users/finance-manager-list']" class="nav-link"> Finance Managers</a>
-         </li>
-         <li class="nav-item">
-            <a [routerLink]="['/users/active-list']" class="nav-link"> Active</a>
-         </li>
-         <li class="nav-item">
-            <a [routerLink]="['/users/inActive-list']" class="nav-link"> Inactive</a>
-         </li>
         <li class="nav-item">
             <a [routerLink]="['/users/create-user']" class="nav-link"> Add Employee</a>
          </li>
     </ul>
 </nav>
 <div class="container col-md-7">
-    <h2>
-        Employee Reimbursement Service List
-    </h2>
+    <h2 class = "filterBar">Employee Reimbursement Service List</h2>
+    <h3 class = "filterBar">Filter Users</h3>
+    <div class = "buttonContainer">
+      <button class="filterButton" (click) = "getUsersResponse()"> All Users </button>
+      <button class="filterButton" (click) = "getActiveResponse()"> Active Users </button>
+      <button class="filterButton" (click) = "getInactiveResponse()"> Inactive Users </button>
+      <button class="filterButton" (click) = "getAdminResponse()"> Admins </button>
+      <button class="filterButton" (click) = "getFinanceManagerResponse()"> Finance Managers </button>
+      <button class="filterButton" (click) = "getEmployeeResponse()"> Employees </button>
+    </div>
+    
     <table class="table table-striped">
         <thead>
             <tr>
@@ -48,8 +41,8 @@
                 <td> {{ userResponse.role }} </td>
                 <td> {{ userResponse.isActive }} </td>
                 <td>
-                    <button (click)="updateUser(userResponse.isActive)" class="btn btn-info">
-                        Update Is-Active Status
+                    <button (click)="updateUser(userResponse.username, userResponse.isActive)" class="btn btn-info">
+                        Toggle Active Status
                     </button>
                 </td>
             </tr>

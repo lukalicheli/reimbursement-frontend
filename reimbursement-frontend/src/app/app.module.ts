@@ -8,13 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginUserComponent } from './components/login-user/login-user.component';
 import { CreateUserComponent } from './components/users/create-user/create-user.component';
-import { UpdateUserComponent } from './components/users/update-user/update-user.component';
-import { EmployeesListComponent } from './components/users/employees-list/employees-list.component';
-import { AdminsListComponent } from './components/users/admins-list/admins-list.component';
-import { FinanceManagerListComponent } from './components/users/finance-manager-list/finance-manager-list.component';
 import { CreateReimbursementComponent } from './components/reimbursements/create-reimbursement/create-reimbursement.component';
-import { ActiveListComponent } from './components/users/active-list/active-list.component';
-import { InActiveListComponent } from './components/users/in-active-list/in-active-list.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +17,7 @@ import { InActiveListComponent } from './components/users/in-active-list/in-acti
     UserListComponent,
     CreateReimbursementComponent,
     CreateUserComponent,
-    LoginUserComponent,
-    UpdateUserComponent,
-    EmployeesListComponent,
-    AdminsListComponent,
-    FinanceManagerListComponent,
-    ActiveListComponent,
-    InActiveListComponent
+    LoginUserComponent
   ],
   imports: [
     BrowserModule,
