@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserResponse } from 'src/app/models/user-response';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
 import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class CreateUserComponent implements OnInit {
 
   constructor(
     private employeeService: EmployeeService,
-    private router: Router
+    private router: Router, 
+    private as: AuthServiceService
   ) {}
 
   ngOnInit(): void {}
@@ -22,7 +24,10 @@ export class CreateUserComponent implements OnInit {
     this.employeeService.createUser(this.user).subscribe(
       (data) => {
         console.log(data);
-        this.goToUserList();
+        if(this.as.user.role == 'admin' || this.as.user.role == 'finance manager'){
+        this.goToUserList();} else {
+          this.router.navigate(['']);
+        }
       },
       (error) => console.log(error)
     );
