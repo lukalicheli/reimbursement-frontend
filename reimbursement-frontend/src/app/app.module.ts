@@ -14,6 +14,8 @@ import { AdminsListComponent } from './components/users/admins-list/admins-list.
 import { FinanceManagerListComponent } from './components/users/finance-manager-list/finance-manager-list.component';
 import { CreateReimbursementComponent } from './components/reimbursements/create-reimbursement/create-reimbursement.component';
 import { PendingReimbursementsComponent } from './components/reimbursements/pending-reimbursements/pending-reimbursements.component';
+import { ActiveListComponent } from './components/users/active-list/active-list.component';
+import { InActiveListComponent } from './components/users/in-active-list/in-active-list.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { PendingReimbursementsComponent } from './components/reimbursements/pend
     PendingReimbursementsComponent,
     EmployeesListComponent,
     AdminsListComponent,
-    FinanceManagerListComponent
+    FinanceManagerListComponent,
+    ActiveListComponent,
+    InActiveListComponent
   ],
   imports: [
     BrowserModule,

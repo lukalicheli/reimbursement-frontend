@@ -26,6 +26,14 @@ export class EmployeeService {
     return this.httpClient.get<UserResponse[]>(this.baseUrl + "/financeManagers");
   }
 
+  getActiveList(): Observable<UserResponse[]> {
+    return this.httpClient.get<UserResponse[]>(this.baseUrl + "/active");
+  }
+
+  getInactiveList(): Observable<UserResponse[]> {
+    return this.httpClient.get<UserResponse[]>(this.baseUrl + "/inactive");
+  }
+
   createUser(user: UserResponse): Observable<Object>{
     return this.httpClient.post(this.baseUrl, user);
   }
