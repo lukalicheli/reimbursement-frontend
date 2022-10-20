@@ -10,6 +10,7 @@ import { LoginUserComponent } from './components/login-user/login-user.component
 import { CreateUserComponent } from './components/users/create-user/create-user.component';
 import { CreateReimbursementComponent } from './components/reimbursements/create-reimbursement/create-reimbursement.component';
 import { EmployeeReimbursementListComponent } from './components/employee-reimbursement-list/employee-reimbursement-list.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { EmployeeReimbursementListComponent } from './components/employee-reimbu
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DatePipe,LoginUserComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

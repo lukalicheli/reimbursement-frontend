@@ -26,7 +26,7 @@ export class CreateReimbursementComponent implements OnInit {
   }
 
   goToReimbList() {
-    this.router.navigate(['/reimbursement']);
+    this.router.navigate(['/reimbursement/employee']);
   }
 
   onSubmit() {

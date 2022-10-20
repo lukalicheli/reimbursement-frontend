@@ -28,6 +28,22 @@ export class ReimbService {
     return this.httpClient.get<ReimbResponse[]>(this.baseUrl + "/AllApproved");
   }
 
+  getOwnedReimbList(username : string): Observable<ReimbResponse[]> {
+    return this.httpClient.get<ReimbResponse[]>(this.baseUrl + "/owned/" + username);
+  }
+
+  getOwnedPendingList(username : string): Observable<ReimbResponse[]> {
+    return this.httpClient.get<ReimbResponse[]>(this.baseUrl + "/ownedPending/" + username);
+  }
+
+  getOwnedDeniedList(username : string): Observable<ReimbResponse[]> {
+    return this.httpClient.get<ReimbResponse[]>(this.baseUrl + "/ownedDenied/" + username);
+  }
+
+  getOwnedApprovedList(username : string): Observable<ReimbResponse[]> {
+    return this.httpClient.get<ReimbResponse[]>(this.baseUrl + "/ownedApproved/" + username );
+  }
+
   createReimbursement(reimb: ReimbResponse): Observable<Object>{
     return this.httpClient.post(this.baseUrl, reimb)
   }

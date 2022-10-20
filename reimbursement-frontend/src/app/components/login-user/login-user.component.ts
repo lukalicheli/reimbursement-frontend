@@ -9,6 +9,7 @@ import { AuthServiceService } from 'src/app/services/auth-service.service';
   styleUrls: ['./login-user.component.css'],
 })
 export class LoginUserComponent implements OnInit {
+  static credentials: any;
   constructor(private as: AuthServiceService, private router: Router) {}
 
   ngOnInit(): void {}
@@ -19,21 +20,20 @@ export class LoginUserComponent implements OnInit {
   };
 
   loginFunction() {
-    console.log(this.credentials);
     this.as.login(this.credentials).subscribe((data: any) => {
       this.as.user = data.body;
-      console.log(data.body);
-      console.log(this.as.user);
       if (this.as.user.role == 'admin') {
         this.router.navigate(['users']);
       } else if (this.as.user.role == 'finance manager') {
         this.router.navigate(['reimbursement']);
       } else if (this.as.user.role == 'employee') {
-        this.router.navigate(['users']);
+        this.router.navigate(['reimbursement/employee']);
       }
     });
-  }
 
+    
+  }
+  
   signUpFunction() {
     this.router.navigate(['users/create-user']);
   }

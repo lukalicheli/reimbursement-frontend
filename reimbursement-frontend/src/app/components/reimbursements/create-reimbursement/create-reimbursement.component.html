@@ -1,13 +1,25 @@
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a routerLink="/reimbursement" routerLinkActive="active" class="nav-link"> Reimbursement List</a>
-         </li>
-        <li class="nav-item">
-            <a class="nav-link"> Add Reimbursement</a>
-         </li>
+    <ul class="navbar-nav  nav-container">
+      <li class="nav-item">
+        <a [routerLink]="['/users']" class="nav-link"> Employee List</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/users/create-user']" class="nav-link">
+          Add Employee</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLink="/reimbursement" class="nav-link">All Reimbursements List</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/reimbursement/employee" class="nav-link">My Reimbursement List</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="../create-reimbursement" class="nav-link"
+          >Add Reimbursement</a>
+      </li>
     </ul>
-</nav>
+  </nav>
 
 
 <div class="container col-md-6 offset-md-3">

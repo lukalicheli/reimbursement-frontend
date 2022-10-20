@@ -1,1 +1,69 @@
-<p>employee-reimbursement-list works!</p>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <ul class="navbar-nav  nav-container">
+    <li class="nav-item">
+      <a [routerLink]="['/users']" class="nav-link"> Employee List</a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['/users/create-user']" class="nav-link">
+        Add Employee</a
+      >
+    </li>
+    <li class="nav-item">
+      <a routerLink="/reimbursement" class="nav-link">All Reimbursements List</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/reimbursement/employee" class="nav-link">My Reimbursement List</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="../create-reimbursement" class="nav-link"
+        >Add Reimbursement</a>
+    </li>
+  </ul>
+</nav>
+  
+  <div class="container col-md-9">
+    <h1 class="filterBar">Employee Reimbursement Service List</h1>
+    <div class="filterContainer">
+      <h5 class="filterBar">Filter Reimbursements</h5>
+      <div class="buttonContainer">
+        <button class="btn btn-warning filterButton" (click)="getAllReimbursements()">
+          All My Reimbursements
+        </button>
+        <button class="btn btn-warning filterButton" (click)="getAllPendingReimbursements()">
+          My Pending Reimbursements
+        </button>
+        <button class="btn btn-warning filterButton" (click)="getAllDeniedReimbursements()">
+          My Denied Reimbursements
+        </button>
+        <button class="btn btn-warning filterButton" (click)="getAllApprovedReimbursements()">
+          My Approved Reimbursements
+        </button>
+      </div>
+    </div>
+  
+    <table class="table table-dark">
+      <thead class="thead-dark">
+        <tr>
+          <th>ID</th>
+          <th>Amount</th>
+          <th>Submitted</th>
+          <th>Resolved</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reimb of reimbResponse">
+          <td (click)="popUp(reimb)"> {{ reimb.reimbID }} </td>
+          <td (click)="popUp(reimb)"> {{ reimb.amount | currency }} </td>
+          <td (click)="popUp(reimb)"> {{ reimb.submitted }} </td>
+          <td (click)="popUp(reimb)"> {{ reimb.resolved }} </td>
+          <td (click)="popUp(reimb)"> {{ reimb.description }} </td>
+          <td (click)="popUp(reimb)"> {{ reimb.status }} </td>
+          <td (click)="popUp(reimb)"> {{ reimb.type }} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

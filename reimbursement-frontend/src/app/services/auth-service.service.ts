@@ -10,6 +10,13 @@ import { UserResponse } from '../models/user-response';
 export class AuthServiceService {
   constructor(private http: HttpClient) {}
 
+  setData(obj : any){
+    this.user = obj;
+  }
+  getData(){
+    return this.user;
+  }
+
   user: UserResponse = {
     id: '',
     givenName: '',
