@@ -78,8 +78,6 @@ export class UserListComponent implements OnInit {
     }
     
     this.employeeService.updateUser(this.form).subscribe((data) => {
-      console.log(this.form);
-      console.log(data);
       this.router.navigateByUrl('', { skipLocationChange: true }).then(() => {
         this.router.navigate(['/users']);
     });
@@ -91,9 +89,6 @@ export class UserListComponent implements OnInit {
   updateUserRole(username: string, role: string, value: string) {
     this.form.roleName = value;
     this.form.username = username; 
-
-    console.log(this.form);
-    console.log(this.form.roleName);
     
 
     if(value == "admin") {

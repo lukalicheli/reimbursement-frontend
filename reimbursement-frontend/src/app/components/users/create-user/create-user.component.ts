@@ -23,7 +23,6 @@ export class CreateUserComponent implements OnInit {
   saveUser() {
     this.employeeService.createUser(this.user).subscribe(
       (data) => {
-        console.log(data);
         if(this.as.user.role == 'admin' || this.as.user.role == 'finance manager'){
         this.goToUserList();} else {
           this.router.navigate(['']);
@@ -38,7 +37,6 @@ export class CreateUserComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.user);
     this.saveUser();
   }
 

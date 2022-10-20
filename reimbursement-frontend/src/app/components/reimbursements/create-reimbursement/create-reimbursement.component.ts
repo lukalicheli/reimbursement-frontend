@@ -18,7 +18,6 @@ export class CreateReimbursementComponent implements OnInit {
   saveReimb() {
     this.reimbService.createReimbursement(this.reimb).subscribe(
       (data) => {
-        console.log(data);
         this.goToReimbList();
       },
       (error) => console.log(error)
@@ -30,7 +29,6 @@ export class CreateReimbursementComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.reimb);
     this.saveReimb();
   }
 

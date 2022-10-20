@@ -64,9 +64,6 @@ export class ReimbursementListComponent implements OnInit {
   updateReimbStatus(reimbID: string, status: string, value: string) {
     this.form.reimbursementID = reimbID;
     this.form.statusUpdate = status;
-    console.log(reimbID);
-    console.log(this.form);
-    console.log(value);
 
     if(value == "approved") {
       this.form.statusUpdate = "true";
@@ -75,8 +72,6 @@ export class ReimbursementListComponent implements OnInit {
     }
     
     this.reimbService.approveOrDeny(this.form).subscribe((data) => {
-      console.log(this.form);
-      console.log(data);
       this.router.navigateByUrl('', { skipLocationChange: true }).then(() => {
         this.router.navigate(['/reimbursement']);
     });
