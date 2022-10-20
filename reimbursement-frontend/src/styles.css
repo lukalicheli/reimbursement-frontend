@@ -24,9 +24,15 @@
 
 body {
     background-image: url('/assets/image2.jpg');
-  
     background-size: 100%;
-
+    background-attachment: fixed;
     background-repeat: no-repeat;
+    color: lightcyan;
+}
+
+.navbar {
+    background-color: transparent !important;
+    font-size: 20px;
+    
 }
 

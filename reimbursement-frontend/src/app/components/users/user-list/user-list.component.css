@@ -17,10 +17,12 @@
 
 select {
     width: auto;
+    background-color: lightblue !important;
 }
 
 .option  {
     width: 100%;
+    
 }
 
 .filterContainer {

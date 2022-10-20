@@ -30,6 +30,7 @@ h1 {
     color: orange;
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {

@@ -1,3 +1,31 @@
 .component-container {
     margin-top: 40px;
 }
+
+input {
+    margin: 5px;
+}
+
+label {
+    margin-left: 5px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+}

@@ -7,6 +7,9 @@
 .btn {
     display: flex;
     justify-content: space-between;
+    margin-top: 5px;
+    justify-content: center;
+    width: 100%;
 }
 
 .filterBar {
