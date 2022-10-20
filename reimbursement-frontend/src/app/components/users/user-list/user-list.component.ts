@@ -68,7 +68,7 @@ export class UserListComponent implements OnInit {
     });
   }
 
-  updateUser(username: string, isActive: boolean) {
+  updateUserStatus(username: string, isActive: boolean) {
     this.form.username = username;
 
     if(isActive) {
@@ -80,6 +80,31 @@ export class UserListComponent implements OnInit {
     this.employeeService.updateUser(this.form).subscribe((data) => {
       console.log(this.form);
       console.log(data);
+      this.router.navigateByUrl('', { skipLocationChange: true }).then(() => {
+        this.router.navigate(['/users']);
+    });
+      
+    });
+    
+  }
+
+  updateUserRole(username: string, role: string, value: string) {
+    this.form.roleName = value;
+    this.form.username = username; 
+
+    console.log(this.form);
+    console.log(this.form.roleName);
+    
+
+    if(value == "admin") {
+      this.form.roleName = "admin";
+    } else if(value == "finance manager") {
+      this.form.roleName = "finance manager"; 
+    } else if(value == "employee") {
+      this.form.roleName = "employee";
+    }
+    
+    this.employeeService.updateUser(this.form).subscribe((data) => {
       this.router.navigateByUrl('', { skipLocationChange: true }).then(() => {
         this.router.navigate(['/users']);
     });

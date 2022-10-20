@@ -41,9 +41,15 @@
                 <td> {{ userResponse.role }} </td>
                 <td> {{ userResponse.isActive }} </td>
                 <td>
-                    <button (click)="updateUser(userResponse.username, userResponse.isActive)" class="btn btn-info">
+                    <button (click)="updateUserStatus(userResponse.username, userResponse.isActive)" class="btn btn-info">
                         Toggle Active Status
                     </button>
+                    <select #roles (change)="updateUserRole(userResponse.username, userResponse.role, roles.value)" class="form-select" aria-label="Roles">
+                        <option >Change Role</option>
+                        <option value="admin">Admin</option>
+                        <option value="finance manager">Finance Manager</option>
+                        <option value="employee">Employee</option>
+                      </select>
                 </td>
             </tr>
         </tbody>
