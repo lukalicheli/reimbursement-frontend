@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginUserComponent } from './components/login-user/login-user.component';
 import { CreateUserComponent } from './components/users/create-user/create-user.component';
 import { CreateReimbursementComponent } from './components/reimbursements/create-reimbursement/create-reimbursement.component';
+import { EmployeeReimbursementListComponent } from './components/employee-reimbursement-list/employee-reimbursement-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CreateReimbursementComponent } from './components/reimbursements/create
     UserListComponent,
     CreateReimbursementComponent,
     CreateUserComponent,
-    LoginUserComponent
+    LoginUserComponent,
+    EmployeeReimbursementListComponent
   ],
   imports: [
     BrowserModule,
