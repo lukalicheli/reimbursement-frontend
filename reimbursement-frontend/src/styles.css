@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-.buttonContainer{
+/* .buttonContainer{
     display:flex
 }
 
@@ -20,4 +20,13 @@
     padding-left: 2px;
     padding-right: 2px;
     justify-content: space-around;
+} */
+
+body {
+    background-image: url('/assets/image2.jpg');
+  
+    background-size: 100%;
+
+    background-repeat: no-repeat;
 }
+

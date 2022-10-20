@@ -4,22 +4,35 @@
       <a routerLink="/reimbursement" class="nav-link">Reimbursement List</a>
     </li>
     <li class="nav-item">
-      <a routerLink="create-reimbursement" class="nav-link">Add Reimbursement</a>
+      <a routerLink="create-reimbursement" class="nav-link"
+        >Add Reimbursement</a
+      >
     </li>
   </ul>
 </nav>
 
-<div class="container col-md-7">
-  <h2 class = "filterBar">Employee Reimbursement Service List</h2>
-  <h3 class = "filterBar">Filter Reimbursements</h3>
-    <div class = "buttonContainer">
-      <button class="filterButton" (click) = "getAllReimbursements()"> All Reimbursements </button>
-      <button class="filterButton" (click) = "getAllPendingReimbursements()"> Pending Reimbursements </button>
-      <button class="filterButton" (click) = "getAllDeniedReimbursements()"> Denied Reimbursements </button>
-      <button class="filterButton" (click) = "getAllApprovedReimbursements()"> Approved Reimbursements </button>
+<div class="container col-md-9">
+  <h1 class="filterBar">Employee Reimbursement Service List</h1>
+  <div class="filterContainer">
+    <h5 class="filterBar">Filter Reimbursements</h5>
+    <div class="buttonContainer">
+      <button class="btn btn-warning filterButton" (click)="getAllReimbursements()">
+        All Reimbursements
+      </button>
+      <button class="btn btn-warning filterButton" (click)="getAllPendingReimbursements()">
+        Pending Reimbursements
+      </button>
+      <button class="btn btn-warning filterButton" (click)="getAllDeniedReimbursements()">
+        Denied Reimbursements
+      </button>
+      <button class="btn btn-warning filterButton" (click)="getAllApprovedReimbursements()">
+        Approved Reimbursements
+      </button>
     </div>
-  <table class="table table-striped">
-    <thead>
+  </div>
+
+  <table class="table table-dark">
+    <thead class="thead-dark">
       <tr>
         <th>ID</th>
         <th>Amount</th>
@@ -31,7 +44,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let reimb of reimbResponse" (click) = "popUp(reimb)">
+      <tr *ngFor="let reimb of reimbResponse" (click)="popUp(reimb)">
         <td>{{ reimb.reimbID }}</td>
         <td>{{ reimb.amount | currency }}</td>
         <td>{{ reimb.submitted }}</td>

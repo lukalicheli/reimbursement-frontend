@@ -1,57 +1,103 @@
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a [routerLink]="['/users']" class="nav-link"> Employee List</a>
-         </li>
-        <li class="nav-item">
-            <a [routerLink]="['/users/create-user']" class="nav-link"> Add Employee</a>
-         </li>
-    </ul>
+  <ul class="navbar-nav  nav-container">
+    <li class="nav-item">
+      <a [routerLink]="['/users']" class="nav-link"> Employee List</a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['/users/create-user']" class="nav-link">
+        Add Employee</a
+      >
+    </li>
+  </ul>
 </nav>
-<div class="container col-md-7">
-    <h2 class = "filterBar">Employee Reimbursement Service List</h2>
-    <h3 class = "filterBar">Filter Users</h3>
-    <div class = "buttonContainer">
-      <button class="filterButton" (click) = "getUsersResponse()"> All Users </button>
-      <button class="filterButton" (click) = "getActiveResponse()"> Active Users </button>
-      <button class="filterButton" (click) = "getInactiveResponse()"> Inactive Users </button>
-      <button class="filterButton" (click) = "getAdminResponse()"> Admins </button>
-      <button class="filterButton" (click) = "getFinanceManagerResponse()"> Finance Managers </button>
-      <button class="filterButton" (click) = "getEmployeeResponse()"> Employees </button>
+<div class="container col-md-9 background">
+  <h1 class="filterBar">Employee Reimbursement Service List</h1>
+  <div class="filterContainer">
+    <h5>Filter Users By:</h5>
+    <div class="buttonContainer">
+      <button class="btn btn-warning filterButton" (click)="getUsersResponse()">
+        All Users
+      </button>
+      <button
+        class="btn btn-warning filterButton"
+        (click)="getActiveResponse()"
+      >
+        Active Users
+      </button>
+      <button
+        class="btn btn-warning filterButton"
+        (click)="getInactiveResponse()"
+      >
+        Inactive Users
+      </button>
+      <button class="btn btn-warning filterButton" (click)="getAdminResponse()">
+        Admins
+      </button>
+      <button
+        class="btn btn-warning filterButton"
+        (click)="getFinanceManagerResponse()"
+      >
+        Finance Managers
+      </button>
+      <button
+        class="btn btn-warning filterButton"
+        (click)="getEmployeeResponse()"
+      >
+        Employees
+      </button>
     </div>
-    
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th> First Name</th>
-                <th> Last Name</th>
-                <th> Email</th>
-                <th> Username</th>
-                <th> Role</th>
-                <th> Active?</th>
-                <th> Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let userResponse of usersResponse">
-                <td> {{ userResponse.givenName }} </td>
-                <td> {{ userResponse.surname }} </td>
-                <td> {{ userResponse.email }} </td>
-                <td> {{ userResponse.username }} </td>
-                <td> {{ userResponse.role }} </td>
-                <td> {{ userResponse.isActive }} </td>
-                <td>
-                    <button (click)="updateUserStatus(userResponse.username, userResponse.isActive)" class="btn btn-info">
-                        Toggle Active Status
-                    </button>
-                    <select #roles (change)="updateUserRole(userResponse.username, userResponse.role, roles.value)" class="form-select" aria-label="Roles">
-                        <option >Change Role</option>
-                        <option value="admin">Admin</option>
-                        <option value="finance manager">Finance Manager</option>
-                        <option value="employee">Employee</option>
-                      </select>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+  </div>
+
+  <table class="table table-dark">
+    <thead class="thead-dark">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Role</th>
+        <th>Active?</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let userResponse of usersResponse">
+        <td>{{ userResponse.givenName }}</td>
+        <td>{{ userResponse.surname }}</td>
+        <td>{{ userResponse.email }}</td>
+        <td>{{ userResponse.username }}</td>
+        <td>{{ userResponse.role }}</td>
+        <td>{{ userResponse.isActive }}</td>
+        <td>
+          <button
+            (click)="
+              updateUserStatus(userResponse.username, userResponse.isActive)
+            "
+            class="btn btn-info"
+          >
+            Toggle Active Status
+          </button>
+          <select
+            class="select-list"
+            #roles
+            (change)="
+              updateUserRole(
+                userResponse.username,
+                userResponse.role,
+                roles.value
+              )
+            "
+            class="form-select"
+            aria-label="Roles"
+          >
+            <option>Change Role</option>
+            <option value="admin">Admin</option>
+            <option value="finance manager">Finance Manager</option>
+            <option value="employee">Employee</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
 </div>

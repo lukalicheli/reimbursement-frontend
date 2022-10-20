@@ -1,0 +1,41 @@
+.buttonContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filterBar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+select {
+    width: auto;
+}
+
+.option  {
+    width: 100%;
+}
+
+.filterContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.filterButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.buttonContainer {
+    margin-top: 20px;
+}
