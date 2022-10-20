@@ -43,7 +43,6 @@ export class EmployeeService {
     return this.httpClient.put<any>(this.baseUrl, form) as unknown as Observable<HttpResponse<UserResponse>>;
   }
 
-
   updateUserActivationByUsername(username: string): Observable<UserResponse>{
     return this.httpClient.put<UserResponse>(this.baseUrl, username);
   }

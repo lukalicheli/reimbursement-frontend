@@ -11,6 +11,7 @@ import { CreateUserComponent } from './components/users/create-user/create-user.
 import { CreateReimbursementComponent } from './components/reimbursements/create-reimbursement/create-reimbursement.component';
 import { EmployeeReimbursementListComponent } from './components/employee-reimbursement-list/employee-reimbursement-list.component';
 import { DatePipe } from '@angular/common';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DatePipe } from '@angular/common';
     CreateReimbursementComponent,
     CreateUserComponent,
     LoginUserComponent,
-    EmployeeReimbursementListComponent
+    EmployeeReimbursementListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

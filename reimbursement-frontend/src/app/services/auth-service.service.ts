@@ -33,4 +33,10 @@ export class AuthServiceService {
       observe: 'response',
     }) as Observable<HttpResponse<UserResponse>>;
   }
+
+  logout(): Observable<HttpResponse<UserResponse>> {
+    return this.http.delete('http://localhost:5000/project2/auth', {
+      observe: 'response'
+    }) as Observable<HttpResponse<UserResponse>>;
+  }
 }
