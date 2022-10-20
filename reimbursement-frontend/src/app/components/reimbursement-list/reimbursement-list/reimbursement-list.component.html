@@ -41,17 +41,36 @@
         <th>Description</th>
         <th>Status</th>
         <th>Type</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let reimb of reimbResponse" (click)="popUp(reimb)">
-        <td>{{ reimb.reimbID }}</td>
-        <td>{{ reimb.amount | currency }}</td>
-        <td>{{ reimb.submitted }}</td>
-        <td>{{ reimb.resolved }}</td>
-        <td>{{ reimb.description }}</td>
-        <td>{{ reimb.status }}</td>
-        <td>{{ reimb.type }}</td>
+      <tr *ngFor="let reimb of reimbResponse">
+        <td (click)="popUp(reimb)">{{ reimb.reimbID }}</td>
+        <td (click)="popUp(reimb)">{{ reimb.amount | currency }}</td>
+        <td (click)="popUp(reimb)">{{ reimb.submitted }}</td>
+        <td (click)="popUp(reimb)">{{ reimb.resolved }}</td>
+        <td (click)="popUp(reimb)">{{ reimb.description }}</td>
+        <td (click)="popUp(reimb)">{{ reimb.status }}</td>
+        <td (click)="popUp(reimb)">{{ reimb.type }}</td>
+        <td>
+          <button #approve value="approved"
+          class="btn btn-info"
+          (click)="
+              updateReimbStatus(reimb.reimbID, reimb.status, approve.value)
+            "
+        >
+          Approve
+        </button>
+        <button #deny value="denied"
+          class="btn btn-danger"
+          (click)="
+              updateReimbStatus(reimb.reimbID, reimb.status, deny.value)
+            "
+        >
+          Deny
+        </button>
+        </td>
       </tr>
     </tbody>
   </table>

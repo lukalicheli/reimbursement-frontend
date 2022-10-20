@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ReimbResponse } from '../models/reimb-response';
+import { UpdateReimbBody } from '../models/update-reimb-body';
 
 @Injectable({
   providedIn: 'root'
@@ -29,5 +30,9 @@ export class ReimbService {
 
   createReimbursement(reimb: ReimbResponse): Observable<Object>{
     return this.httpClient.post(this.baseUrl, reimb)
+  }
+
+  approveOrDeny(form: UpdateReimbBody): Observable<HttpResponse<any>>{
+    return this.httpClient.put<any>(this.baseUrl, form) as unknown as Observable<HttpResponse<ReimbResponse>>;
   }
 }
